@@ -1,8 +1,18 @@
 {
   "name": "momentnp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.2",
+  "description": "momentnp is a npm library that facilitates easy handling and formatting of dates, with special support for the Nepali calendar system. It provides methods for calculating time differences, formatting dates, converting dates to the Bikram Sambat (BS) calendar, and checking if a date is in the past. With its intuitive interface, momentnp simplifies date management tasks in both English and Nepali environments.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "author": "Prashant <meprazhant@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meprazhant/moment.np"
+  },
+  "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
@@ -12,8 +22,5 @@
     "momentnepal",
     "moment.np"
   ],
-  "author": "prashant",
-  "license": "ISC",
   "type": "module"
-  
 }
