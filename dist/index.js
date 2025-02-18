@@ -183,7 +183,7 @@ var numberOfDaysEachMonthBS = {
     '2078': [31, 31, 31, 32, 31, 31, 30, 29, 30, 29, 30, 30],
     '2079': [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
     '2080': [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 30],
-    '2081': [31, 31, 32, 32, 31, 30, 30, 30, 29, 30, 30, 30],
+    '2081': [31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
     '2082': [31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30],
     '2083': [31, 31, 32, 31, 31, 30, 30, 30, 29, 30, 30, 30],
     '2084': [31, 31, 32, 31, 31, 30, 30, 30, 29, 30, 30, 30],
@@ -585,11 +585,9 @@ function momentnp(date) {
 }
 
 function validateDate(date){
-    return new Date(date) ? new Date(date) : new Date()
+    const parsed = new Date(date);
+    return isNaN(parsed.getTime()) ? new Date() : parsed;
 }
-
-
-
 
 function getNepaliNumber(n) {
     if (n < 100) {
